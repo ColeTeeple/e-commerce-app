@@ -1,0 +1,39 @@
+body {
+    /* background: linear-gradient(to right, rgb(7, 7, 67), rgb(11, 71, 93)); */
+    background-image: url("imgs/background3.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+label {
+    font-weight: bold;
+}
+
+h1, h4, label {
+    /* color: rgba(255, 255, 255, .7); */
+    color: black;
+}
+
+.orders-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    /* color: white; */
+    color: black;
+}
+
+#bootstrap-navbar {
+    background-color: rgba(255, 255, 255, .4);
+}
+
+#offcanvas {
+    background-color: rgb(214, 228, 230);
+}
