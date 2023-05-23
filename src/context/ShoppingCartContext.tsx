@@ -1,4 +1,4 @@
-import { ReactNode, useContext, useEffect, useState } from "react";
+import { Dispatch, ReactNode, SetStateAction, useContext, useEffect, useState } from "react";
 import { createContext } from "react";
 import ShoppingCart from "../components/ShoppingCart";
 import {
@@ -21,7 +21,8 @@ type ShoppingCartContext = {
   decreaseCartQuantity: (id: number) => void;
   removeFromCart: (id: number) => void;
   isOpen: boolean;
-  setIsOpen: () => void;
+  // setIsOpen: Dispatch<SetStateAction<boolean>>;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
   createUser: (email: string, password: string) => Promise<UserCredential>,
   login: (email: string, password: string) => Promise<UserCredential>,
   logout: () => Promise<void>,
@@ -153,6 +154,8 @@ export const ShoppingCartProvider = ({
         cartQuantity,
         openCart,
         closeCart,
+        isOpen,
+        setIsOpen,
         createUser,
         login, 
         logout,
